@@ -19,6 +19,8 @@ export type LocationDetails = {
     /** Transpiled from string */
     countryCode?: string;
     /** Transpiled from string */
+    region?: string;
+    /** Transpiled from string */
     city?: string;
 }
 
