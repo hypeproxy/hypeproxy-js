@@ -44,7 +44,9 @@ jobs:
           "${GITHUB_WORKSPACE}/.github/bump.sh"
 
       - name: Remove hypeproxy-dotnet
-        run: rm -rf hypeproxy-dotnet
+        run: |
+          rm src/index.ts
+          rm -rf hypeproxy-dotnet
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
