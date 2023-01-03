@@ -35,6 +35,9 @@ jobs:
       - name: Restore *.ts files
         run: mv *.ts src/
 
+      - name: Generate index.ts
+        run: find ./src -name "*.ts" ! -name "index.ts" | xargs basename -s .ts | sort | xargs -I '{}' bash -c 'echo "export * from \"./{}\";"' >> ./src/index.ts
+
       - name: Bump Version
         run: |
           chmod +x "${GITHUB_WORKSPACE}/.github/bump.sh"
