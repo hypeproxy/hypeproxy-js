@@ -13,26 +13,6 @@ export type ApiKeyArtifact = {
     tokenExpiration?: (Date | string);
 }
 
-/** Transpiled from HypeProxy.Responses.InsightsSummary */
-export type InsightsSummary = {
-    /** Transpiled from string */
-    remoteIp?: string;
-    /** Transpiled from HypeProxy.Responses.LocationDetails */
-    geolocationDetails?: LocationDetails;
-}
-
-/** Transpiled from HypeProxy.Responses.LocationDetails */
-export type LocationDetails = {
-    /** Transpiled from string */
-    continent?: string;
-    /** Transpiled from string */
-    country?: string;
-    /** Transpiled from string */
-    countryCode?: string;
-    /** Transpiled from string */
-    city?: string;
-}
-
 /** Transpiled from HypeProxy.Responses.OrderSummary */
 export type OrderSummary = {
     /** Transpiled from string */
@@ -61,16 +41,6 @@ export type PaymentResponse = {
     returnUrl?: string;
     /** Transpiled from string */
     customData?: string;
-}
-
-/** Transpiled from HypeProxy.Responses.PingResponse */
-export type PingResponse = {
-    /** Transpiled from bool */
-    isOperational: boolean;
-    /** Transpiled from int */
-    reason: number;
-    /** Transpiled from long */
-    elapsedMilliseconds: number;
 }
 
 /** Transpiled from HypeProxy.Responses.RequestDetails */
