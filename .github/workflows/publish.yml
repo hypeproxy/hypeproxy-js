@@ -26,13 +26,13 @@ jobs:
       - name: Install Tapper
         run: dotnet tool install --global Tapper.Generator --version 1.5.1
 
-      - name: Prevent *.ts files for deletion
+      - name: Prevent HypeProxy.ts files for deletion
         run: mv src/HypeProxy.ts .
 
       - name: Transpile
         run: tapper --project ./hypeproxy-dotnet/src/HypeProxy/HypeProxy.csproj --output ./src/
 
-      - name: Restore *.ts files
+      - name: Restore HypeProxy.ts files
         run: mv HypeProxy.ts src/
 
       - name: Generate index.ts
