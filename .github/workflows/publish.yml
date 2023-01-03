@@ -1,0 +1,59 @@
+name: Release
+
+on: repository_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 6.0.x
+
+      - name: Clone hypeproxy-dotnet
+        run: git clone https://github.com/hypeproxy/hypeproxy-dotnet
+
+      - name: Restore Dependencies
+        run: dotnet restore ./hypeproxy-dotnet/src/HypeProxy/HypeProxy.csproj
+
+      - name: Build
+        run: dotnet build ./hypeproxy-dotnet/src/HypeProxy/HypeProxy.csproj --configuration Release
+
+      - name: Install Tapper
+        run: dotnet tool install --global Tapper.Generator --version 1.5.1
+
+      - name: Prevent *.ts files for deletion
+        run: mv src/*.ts .
+
+      - name: Transpile
+        run: tapper --project ./hypeproxy-dotnet/src/HypeProxy/HypeProxy.csproj --output ./src/
+
+      - name: Restore *.ts files
+        run: mv *.ts src/
+
+      - name: Bump Version
+        run: |
+          chmod +x "${GITHUB_WORKSPACE}/.github/bump.sh"
+          "${GITHUB_WORKSPACE}/.github/bump.sh"
+
+      - name: Remove hypeproxy-dotnet
+        run: rm -rf hypeproxy-dotnet
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update package
+
+      # Setup .npmrc file to publish to npm
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16.x"
+          registry-url: "https://registry.npmjs.org"
+      - run: yarn
+      - run: yarn build
+      - run: npm publish --dry-run
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

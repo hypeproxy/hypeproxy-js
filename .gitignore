@@ -1,0 +1,12 @@
+.vs
+.vscode
+.idea
+
+node_modules
+.yarn
+
+dist/*
+
+build.sh
+
+*.lock

@@ -1,0 +1,8 @@
+.vs
+.vscode
+.idea
+.yarnrc.yml
+build.sh
+.yarn
+node_modules
+hypeproxy-dotnet
