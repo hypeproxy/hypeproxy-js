@@ -284,8 +284,6 @@ export type Purchase = {
     paymentMethod: PaymentMethods;
     /** Transpiled from HypeProxy.Constants.BillingPeriods */
     billingPeriod: BillingPeriods;
-    /** Transpiled from System.Guid */
-    priceId: string;
     /** Transpiled from string? */
     relatedPaymentId?: string;
     /** Transpiled from System.Guid */

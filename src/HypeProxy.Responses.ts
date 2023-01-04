@@ -39,8 +39,8 @@ export type OrderSummary = {
 export type PaymentResponse = {
     /** Transpiled from System.Uri */
     returnUrl?: string;
-    /** Transpiled from string */
-    customData?: string;
+    /** Transpiled from object */
+    customData?: any;
 }
 
 /** Transpiled from HypeProxy.Responses.RequestDetails */
