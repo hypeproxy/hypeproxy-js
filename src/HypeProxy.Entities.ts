@@ -212,8 +212,34 @@ export type Product = {
     postHook?: string;
 } & BaseEntity;
 
-/** Transpiled from HypeProxy.Entities.ProductDetail */
-export type ProductDetail = {
+/** Transpiled from HypeProxy.Entities.Provider */
+export type Provider = {
+    /** Transpiled from string */
+    name?: string;
+    /** Transpiled from string */
+    description?: string;
+    /** Transpiled from string */
+    companyName?: string;
+    /** Transpiled from string */
+    websiteUrl?: string;
+    /** Transpiled from string */
+    logoUrl?: string;
+    /** Transpiled from int */
+    availableStock: number;
+    /** Transpiled from bool */
+    outOfStock: boolean;
+} & BaseEntity;
+
+/** Transpiled from HypeProxy.Entities.ProviderLocation */
+export type ProviderLocation = {
+    /** Transpiled from System.Guid */
+    providerId: string;
+    /** Transpiled from System.Guid */
+    locationId: string;
+} & BaseEntity;
+
+/** Transpiled from HypeProxy.Entities.Proxy */
+export type Proxy = {
     /** Transpiled from System.Guid */
     productId: string;
     /** Transpiled from System.Guid */
@@ -240,32 +266,6 @@ export type ProductDetail = {
     interface?: string;
     /** Transpiled from string */
     mainData?: string;
-} & BaseEntity;
-
-/** Transpiled from HypeProxy.Entities.Provider */
-export type Provider = {
-    /** Transpiled from string */
-    name?: string;
-    /** Transpiled from string */
-    description?: string;
-    /** Transpiled from string */
-    companyName?: string;
-    /** Transpiled from string */
-    websiteUrl?: string;
-    /** Transpiled from string */
-    logoUrl?: string;
-    /** Transpiled from int */
-    availableStock: number;
-    /** Transpiled from bool */
-    outOfStock: boolean;
-} & BaseEntity;
-
-/** Transpiled from HypeProxy.Entities.ProviderLocation */
-export type ProviderLocation = {
-    /** Transpiled from System.Guid */
-    providerId: string;
-    /** Transpiled from System.Guid */
-    locationId: string;
 } & BaseEntity;
 
 /** Transpiled from HypeProxy.Entities.Purchase */
@@ -317,7 +317,7 @@ export type Reminder = {
 /** Transpiled from HypeProxy.Entities.Renew */
 export type Renew = {
     /** Transpiled from System.Guid */
-    productDetailsId: string;
+    proxyId: string;
     /** Transpiled from double */
     eachMinutes: number;
 } & BaseEntity;
