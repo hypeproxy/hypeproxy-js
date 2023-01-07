@@ -36,7 +36,9 @@ jobs:
         run: mv HypeProxy.ts src/
 
       - name: Generate index.ts
-        run: find ./src -name "*.ts" ! -name "index.ts" | xargs basename -s .ts | sort | xargs -I '{}' bash -c 'echo "export * from \"./{}\";"' >> ./src/index.ts
+        run: |
+          echo "" > ./src/index.ts
+          find ./src -name "*.ts" ! -name "index.ts" | xargs basename -s .ts | sort | xargs -I '{}' bash -c 'echo "export * from \"./{}\";"' >> ./src/index.ts
 
       # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v3
