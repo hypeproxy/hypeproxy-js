@@ -40,6 +40,16 @@ jobs:
           echo "" > ./src/index.ts
           find ./src -name "*.ts" ! -name "index.ts" | xargs basename -s .ts | sort | xargs -I '{}' bash -c 'echo "export * from \"./{}\";"' >> ./src/index.ts
 
+      - name: Bump Version
+        run: |
+          chmod +x "${GITHUB_WORKSPACE}/.github/bump.sh"
+          "${GITHUB_WORKSPACE}/.github/bump.sh"
+
+      - name: Remove hypeproxy-dotnet
+        run: |
+          rm src/index.ts
+          rm -rf hypeproxy-dotnet
+          
       # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v3
         with:
@@ -50,16 +60,6 @@ jobs:
       - run: npm publish --dry-run
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Bump Version
-        run: |
-          chmod +x "${GITHUB_WORKSPACE}/.github/bump.sh"
-          "${GITHUB_WORKSPACE}/.github/bump.sh"
-
-      - name: Remove hypeproxy-dotnet
-        run: |
-          rm src/index.ts
-          rm -rf hypeproxy-dotnet
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
