@@ -33,12 +33,15 @@ jobs:
         run: tapper --project ./hypeproxy-dotnet/src/HypeProxy/HypeProxy.csproj --output ./src/
 
       - name: Restore HypeProxy.ts files
-        run: mv HypeProxy.ts src/
+        run: mv HypeProxy.ts ./src/
 
       - name: Generate index.ts
         run: |
           echo "" > ./src/index.ts
           find ./src -name "*.ts" ! -name "index.ts" | xargs basename -s .ts | sort | xargs -I '{}' bash -c 'echo "export * from \"./{}\";"' >> ./src/index.ts
+          pwd
+          ls -la
+          cat ./src/index.ts
 
       - name: Bump Version
         run: |
@@ -47,8 +50,8 @@ jobs:
 
       - name: Remove hypeproxy-dotnet
         run: |
-          rm src/index.ts
-          rm -rf hypeproxy-dotnet
+          rm ./src/index.ts
+          rm -rf ./hypeproxy-dotnet
           
       # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v3
