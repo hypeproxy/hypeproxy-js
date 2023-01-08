@@ -50,9 +50,7 @@ jobs:
           "${GITHUB_WORKSPACE}/.github/bump.sh"
 
       - name: Remove hypeproxy-dotnet
-        run: |
-          rm ./src/index.ts
-          rm -rf ./hypeproxy-dotnet
+        run: rm -rf ./hypeproxy-dotnet
           
       # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v3
