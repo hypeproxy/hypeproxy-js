@@ -73,6 +73,8 @@ export type Credential = {
 /** Transpiled from HypeProxy.Entities.Feature */
 export type Feature = {
     /** Transpiled from string */
+    tag?: string;
+    /** Transpiled from string */
     name?: string;
     /** Transpiled from string */
     description?: string;
