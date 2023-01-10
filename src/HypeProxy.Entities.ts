@@ -136,6 +136,16 @@ export type Invoice = {
     details?: string;
 } & BaseEntity;
 
+/** Transpiled from HypeProxy.Entities.IpRotation */
+export type IpRotation = {
+    /** Transpiled from System.Guid */
+    proxyId: string;
+    /** Transpiled from int */
+    interval: number;
+    /** Transpiled from bool */
+    isEnabled: boolean;
+} & BaseEntity;
+
 /** Transpiled from HypeProxy.Entities.Location */
 export type Location = {
     /** Transpiled from string */
@@ -314,14 +324,6 @@ export type Reminder = {
     contactEmail?: string;
     /** Transpiled from bool */
     wasContacted: boolean;
-} & BaseEntity;
-
-/** Transpiled from HypeProxy.Entities.Renew */
-export type Renew = {
-    /** Transpiled from System.Guid */
-    proxyId: string;
-    /** Transpiled from double */
-    eachMinutes: number;
 } & BaseEntity;
 
 /** Transpiled from HypeProxy.Entities.Ticket */
