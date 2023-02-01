@@ -325,13 +325,11 @@ export enum PaymentMethods {
 /** Transpiled from HypeProxy.Constants.PurchaseStatuses */
 export enum PurchaseStatuses {
     Created = "Created",
-    Provisioning = "Provisioning",
     Live = "Live",
     Canceled = "Canceled",
     Refunded = "Refunded",
     Off = "Off",
     Removed = "Removed",
-    Extending = "Extending",
 }
 
 /** Transpiled from HypeProxy.Constants.TicketPriorities */
