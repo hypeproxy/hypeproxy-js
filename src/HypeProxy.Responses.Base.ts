@@ -3,19 +3,19 @@
 /* tslint:disable */
 import { RequestDetails } from './HypeProxy.Responses';
 
-/** Transpiled from HypeProxy.Responses.ApiResponse.ApiError */
+/** Transpiled from HypeProxy.Responses.Base.ApiError */
 export type ApiError = {
-    /** Transpiled from HypeProxy.Responses.ApiResponse.ApiErrorCode */
+    /** Transpiled from HypeProxy.Responses.Base.ApiErrorCode */
     code?: ApiErrorCode;
     /** Transpiled from string */
     description?: string;
 }
 
-/** Transpiled from HypeProxy.Responses.ApiResponse.ApiErrorCode */
+/** Transpiled from HypeProxy.Responses.Base.ApiErrorCode */
 export type ApiErrorCode = {
 }
 
-/** Transpiled from HypeProxy.Responses.ApiResponse.ApiResponse */
+/** Transpiled from HypeProxy.Responses.Base.ApiResponse */
 export type ApiResponse = {
     /** Transpiled from string */
     message?: string;
@@ -23,7 +23,7 @@ export type ApiResponse = {
     statusCode: number;
     /** Transpiled from object */
     data?: any;
-    /** Transpiled from System.Collections.Generic.IEnumerable<HypeProxy.Responses.ApiResponse.ApiError> */
+    /** Transpiled from System.Collections.Generic.IEnumerable<HypeProxy.Responses.Base.ApiError> */
     errors?: ApiError[];
     /** Transpiled from HypeProxy.Responses.RequestDetails */
     requestDetails?: RequestDetails;

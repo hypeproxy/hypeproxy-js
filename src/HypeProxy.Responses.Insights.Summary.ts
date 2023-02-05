@@ -2,15 +2,21 @@
 /* eslint-disable */
 /* tslint:disable */
 
-/** Transpiled from HypeProxy.Responses.InsightsSummary.InsightsSummary */
+/** Transpiled from HypeProxy.Responses.Insights.Summary.InsightsSummary */
 export type InsightsSummary = {
     /** Transpiled from string */
     remoteIp?: string;
-    /** Transpiled from HypeProxy.Responses.InsightsSummary.LocationDetails */
+    /** Transpiled from string */
+    internetServiceProvider?: string;
+    /** Transpiled from string */
+    asn?: string;
+    /** Transpiled from int */
+    trustScore: number;
+    /** Transpiled from HypeProxy.Responses.Insights.Summary.LocationDetails */
     geolocationDetails?: LocationDetails;
 }
 
-/** Transpiled from HypeProxy.Responses.InsightsSummary.LocationDetails */
+/** Transpiled from HypeProxy.Responses.Insights.Summary.LocationDetails */
 export type LocationDetails = {
     /** Transpiled from string */
     continent?: string;
@@ -18,6 +24,8 @@ export type LocationDetails = {
     country?: string;
     /** Transpiled from string */
     countryCode?: string;
+    /** Transpiled from string */
+    countryEmoji?: string;
     /** Transpiled from string */
     region?: string;
     /** Transpiled from string */
