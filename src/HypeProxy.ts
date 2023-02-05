@@ -1,4 +1,4 @@
-import { ApiResponse } from "./HypeProxy.Responses.ApiResponse";
+import { ApiResponse } from "./HypeProxy.Responses.Base";
 
 export interface ApiResponseFor<T> extends ApiResponse
 {
