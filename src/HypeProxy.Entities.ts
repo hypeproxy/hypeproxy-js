@@ -62,12 +62,8 @@ export type Credential = {
     password?: string;
     /** Transpiled from bool */
     isIpAuthenticationEnabled: boolean;
-    /** Transpiled from string? */
-    authorizedIp?: string;
-    /** Transpiled from bool */
-    isHttpEnabled: boolean;
-    /** Transpiled from bool */
-    isSocksEnabled: boolean;
+    /** Transpiled from System.Collections.Generic.IEnumerable<string>? */
+    authorizedIps?: string[];
 } & BaseEntity;
 
 /** Transpiled from HypeProxy.Entities.Feature */
