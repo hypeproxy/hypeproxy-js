@@ -4,7 +4,7 @@
 import { PaymentMethods, BillingPeriods } from './HypeProxy.Constants';
 import { BaseEntity } from './HypeProxy.Entities';
 
-/** Transpiled from HypeProxy.Entities.Price.Price */
+/** Transpiled from HypeProxy.Entities.Prices.Price */
 export type Price = {
     /** Transpiled from System.Guid */
     productId?: string;
@@ -22,11 +22,11 @@ export type Price = {
     planIdPeriod?: string;
     /** Transpiled from double */
     unitPrice: number;
-    /** Transpiled from System.Collections.Generic.IEnumerable<HypeProxy.Entities.Price.PriceTiers>? */
+    /** Transpiled from System.Collections.Generic.IEnumerable<HypeProxy.Entities.Prices.PriceTiers>? */
     priceTiers?: PriceTiers[];
 } & BaseEntity;
 
-/** Transpiled from HypeProxy.Entities.Price.PriceTiers */
+/** Transpiled from HypeProxy.Entities.Prices.PriceTiers */
 export type PriceTiers = {
     /** Transpiled from int */
     maximumQuantity: number;

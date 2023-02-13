@@ -10,6 +10,24 @@ export enum BillingPeriods {
     Yearly = "Yearly",
 }
 
+/** Transpiled from HypeProxy.Constants.DefaultApiErrorCodes */
+export enum DefaultApiErrorCodes {
+    UnknownError = "UnknownError",
+    MissingToken = "MissingToken",
+    ExpiredToken = "ExpiredToken",
+    MalformedToken = "MalformedToken",
+    UserNotFound = "UserNotFound",
+    UserNotAllowed = "UserNotAllowed",
+    MissingUserId = "MissingUserId",
+    FailedValidation = "FailedValidation",
+}
+
+/** Transpiled from HypeProxy.Constants.Features */
+export enum Features {
+    IpRotation = "IpRotation",
+    IpAuthentication = "IpAuthentication",
+}
+
 /** Transpiled from HypeProxy.Constants.Icons */
 export enum Icons {
     AcademicCapIcon = "AcademicCapIcon",

@@ -3,7 +3,7 @@
 /* tslint:disable */
 import { BillingPeriods, PaymentMethods } from './HypeProxy.Constants';
 
-/** Transpiled from HypeProxy.Entities.ApplicationUser.ApplicationUser */
+/** Transpiled from HypeProxy.Entities.ApplicationUsers.ApplicationUser */
 export type ApplicationUser = {
     /** Transpiled from System.Guid */
     id: string;
@@ -11,25 +11,25 @@ export type ApplicationUser = {
     email?: string;
     /** Transpiled from string */
     fullName?: string;
-    /** Transpiled from HypeProxy.Entities.ApplicationUser.BillingDetails */
+    /** Transpiled from HypeProxy.Entities.ApplicationUsers.BillingDetails */
     billingDetails?: BillingDetails;
-    /** Transpiled from HypeProxy.Entities.ApplicationUser.ConfidenceDetails */
-    confidenceDetails?: ConfidenceDetails;
-    /** Transpiled from string */
-    stripeCustomerId?: string;
     /** Transpiled from System.DateTime */
     registrationDateTime: (Date | string);
     /** Transpiled from string */
     cultureConcern?: string;
+    /** Transpiled from string */
+    stripeCustomerId?: string;
     /** Transpiled from int */
     securityFlag: number;
     /** Transpiled from string */
     passwordSignature?: string;
     /** Transpiled from string */
     fingerprintId?: string;
-    /** Transpiled from HypeProxy.Entities.ApplicationUser.AuthorizationDetails */
-    authorizationDetails?: AuthorizationDetails;
-    /** Transpiled from HypeProxy.Entities.ApplicationUser.UserSettings */
+    /** Transpiled from HypeProxy.Entities.ApplicationUsers.AuthorizationDetails */
+    authorization?: AuthorizationDetails;
+    /** Transpiled from HypeProxy.Entities.ApplicationUsers.ConfidenceDetails */
+    confidence?: ConfidenceDetails;
+    /** Transpiled from HypeProxy.Entities.ApplicationUsers.UserSettings */
     settings?: UserSettings;
     /** Transpiled from bool */
     hadFirstLogin: boolean;
@@ -37,7 +37,7 @@ export type ApplicationUser = {
     customData?: string;
 }
 
-/** Transpiled from HypeProxy.Entities.ApplicationUser.AuthorizationDetails */
+/** Transpiled from HypeProxy.Entities.ApplicationUsers.AuthorizationDetails */
 export type AuthorizationDetails = {
     /** Transpiled from System.Guid */
     id: string;
@@ -49,7 +49,7 @@ export type AuthorizationDetails = {
     blockingDateTime?: (Date | string);
 }
 
-/** Transpiled from HypeProxy.Entities.ApplicationUser.BillingDetails */
+/** Transpiled from HypeProxy.Entities.ApplicationUsers.BillingDetails */
 export type BillingDetails = {
     /** Transpiled from System.Guid */
     id: string;
@@ -75,7 +75,7 @@ export type BillingDetails = {
     companyCountry?: string;
 }
 
-/** Transpiled from HypeProxy.Entities.ApplicationUser.ConfidenceDetails */
+/** Transpiled from HypeProxy.Entities.ApplicationUsers.ConfidenceDetails */
 export type ConfidenceDetails = {
     /** Transpiled from System.Guid */
     id: string;
@@ -89,7 +89,7 @@ export type ConfidenceDetails = {
     kycId?: string;
 }
 
-/** Transpiled from HypeProxy.Entities.ApplicationUser.UserSettings */
+/** Transpiled from HypeProxy.Entities.ApplicationUsers.UserSettings */
 export type UserSettings = {
     /** Transpiled from System.Guid */
     id: string;

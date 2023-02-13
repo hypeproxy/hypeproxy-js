@@ -3,8 +3,8 @@
 /* tslint:disable */
 import { BillingPeriods, PaymentMethods, TicketPriorities } from './HypeProxy.Constants';
 
-/** Transpiled from HypeProxy.Dtos.ChangeBillingDetailsModel */
-export type ChangeBillingDetailsModel = {
+/** Transpiled from HypeProxy.Requests.ChangeBillingDetailsRequest */
+export type ChangeBillingDetailsRequest = {
     /** Transpiled from string */
     fullName?: string;
     /** Transpiled from string */
@@ -27,8 +27,26 @@ export type ChangeBillingDetailsModel = {
     companyCountry?: string;
 }
 
-/** Transpiled from HypeProxy.Dtos.ChangePasswordModel */
-export type ChangePasswordModel = {
+/** Transpiled from HypeProxy.Requests.ChangeCommentRequest */
+export type ChangeCommentRequest = {
+    /** Transpiled from string */
+    message?: string;
+}
+
+/** Transpiled from HypeProxy.Requests.ChangeCredentialsRequest */
+export type ChangeCredentialsRequest = {
+    /** Transpiled from string */
+    username?: string;
+    /** Transpiled from string */
+    password?: string;
+    /** Transpiled from bool */
+    isIpAuthenticationEnabled: boolean;
+    /** Transpiled from System.Collections.Generic.IEnumerable<string> */
+    authorizedIps?: string[];
+}
+
+/** Transpiled from HypeProxy.Requests.ChangePasswordRequest */
+export type ChangePasswordRequest = {
     /** Transpiled from string */
     currentPassword?: string;
     /** Transpiled from string */
@@ -37,46 +55,46 @@ export type ChangePasswordModel = {
     passwordConfirmation?: string;
 }
 
-/** Transpiled from HypeProxy.Dtos.ChangeRequirementsModel */
-export type ChangeRequirementsModel = {
+/** Transpiled from HypeProxy.Requests.ChangeRequirementsRequest */
+export type ChangeRequirementsRequest = {
     /** Transpiled from string */
     usageDomain?: string;
     /** Transpiled from string */
     usageExplanation?: string;
 }
 
-/** Transpiled from HypeProxy.Dtos.ChangeUserSettingsModel */
-export type ChangeUserSettingsModel = {
+/** Transpiled from HypeProxy.Requests.ChangeUserSettingsRequest */
+export type ChangeUserSettingsRequest = {
     /** Transpiled from HypeProxy.Constants.BillingPeriods */
     defaultBillingPeriods: BillingPeriods;
     /** Transpiled from HypeProxy.Constants.PaymentMethods */
     defaultPaymentMethods: PaymentMethods;
 }
 
-/** Transpiled from HypeProxy.Dtos.ConfirmEmailModel */
-export type ConfirmEmailModel = {
+/** Transpiled from HypeProxy.Requests.ConfirmEmailRequest */
+export type ConfirmEmailRequest = {
     /** Transpiled from string */
     email?: string;
     /** Transpiled from string */
     token?: string;
 }
 
-/** Transpiled from HypeProxy.Dtos.CreateReminderModel */
-export type CreateReminderModel = {
+/** Transpiled from HypeProxy.Requests.CreateReminderRequest */
+export type CreateReminderRequest = {
     /** Transpiled from string */
     email?: string;
     /** Transpiled from System.Guid */
     productId: string;
 }
 
-/** Transpiled from HypeProxy.Dtos.CreateTicketAnswerModel */
-export type CreateTicketAnswerModel = {
+/** Transpiled from HypeProxy.Requests.CreateTicketAnswerRequest */
+export type CreateTicketAnswerRequest = {
     /** Transpiled from string */
     message?: string;
 }
 
-/** Transpiled from HypeProxy.Dtos.CreateTicketModel */
-export type CreateTicketModel = {
+/** Transpiled from HypeProxy.Requests.CreateTicketRequest */
+export type CreateTicketRequest = {
     /** Transpiled from string */
     subject?: string;
     /** Transpiled from string */
@@ -87,14 +105,14 @@ export type CreateTicketModel = {
     relatedPurchaseId?: string;
 }
 
-/** Transpiled from HypeProxy.Dtos.ForgotPasswordModel */
-export type ForgotPasswordModel = {
+/** Transpiled from HypeProxy.Requests.ForgotPasswordRequest */
+export type ForgotPasswordRequest = {
     /** Transpiled from string */
     email?: string;
 }
 
-/** Transpiled from HypeProxy.Dtos.OrderCriteria */
-export type OrderCriteria = {
+/** Transpiled from HypeProxy.Requests.OrderCriteriaRequest */
+export type OrderCriteriaRequest = {
     /** Transpiled from System.Guid */
     productId: string;
     /** Transpiled from System.Guid */
@@ -113,8 +131,26 @@ export type OrderCriteria = {
     isAutomaticallyRenewed: boolean;
 }
 
-/** Transpiled from HypeProxy.Dtos.ResetPasswordModel */
-export type ResetPasswordModel = {
+/** Transpiled from HypeProxy.Requests.RequestDetails */
+export type RequestDetails = {
+    /** Transpiled from System.Guid */
+    id: string;
+    /** Transpiled from System.Guid */
+    userId?: string;
+    /** Transpiled from string */
+    endpoint?: string;
+    /** Transpiled from System.DateTime */
+    date: (Date | string);
+    /** Transpiled from long */
+    timestamp: number;
+    /** Transpiled from string */
+    userAgent?: string;
+    /** Transpiled from string */
+    clientIp?: string;
+}
+
+/** Transpiled from HypeProxy.Requests.ResetPasswordRequest */
+export type ResetPasswordRequest = {
     /** Transpiled from string */
     email?: string;
     /** Transpiled from string */
@@ -125,8 +161,8 @@ export type ResetPasswordModel = {
     passwordConfirmation?: string;
 }
 
-/** Transpiled from HypeProxy.Dtos.SignInModel */
-export type SignInModel = {
+/** Transpiled from HypeProxy.Requests.SignInRequest */
+export type SignInRequest = {
     /** Transpiled from string */
     email: string;
     /** Transpiled from string */
@@ -135,8 +171,8 @@ export type SignInModel = {
     otpCode?: string;
 }
 
-/** Transpiled from HypeProxy.Dtos.SignUpModel */
-export type SignUpModel = {
+/** Transpiled from HypeProxy.Requests.SignUpRequest */
+export type SignUpRequest = {
     /** Transpiled from string */
     email?: string;
     /** Transpiled from string */
@@ -147,23 +183,5 @@ export type SignUpModel = {
     fingerprint?: string;
     /** Transpiled from bool */
     acceptTerms: boolean;
-}
-
-/** Transpiled from HypeProxy.Dtos.UpdateCommentModel */
-export type UpdateCommentModel = {
-    /** Transpiled from string */
-    message?: string;
-}
-
-/** Transpiled from HypeProxy.Dtos.UpdateCredentialsModel */
-export type UpdateCredentialsModel = {
-    /** Transpiled from string */
-    username?: string;
-    /** Transpiled from string */
-    password?: string;
-    /** Transpiled from bool */
-    isIpAuthenticationEnabled: boolean;
-    /** Transpiled from string */
-    authorizedIp?: string;
 }
 
