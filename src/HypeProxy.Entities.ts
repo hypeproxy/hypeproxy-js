@@ -249,6 +249,8 @@ export type ProviderLocation = {
 /** Transpiled from HypeProxy.Entities.Proxy */
 export type Proxy = {
     /** Transpiled from System.Guid */
+    id: string;
+    /** Transpiled from System.Guid */
     productId: string;
     /** Transpiled from System.Guid */
     locationId: string;

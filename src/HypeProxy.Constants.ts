@@ -344,10 +344,7 @@ export enum PaymentMethods {
 export enum PurchaseStatuses {
     Created = "Created",
     Live = "Live",
-    Canceled = "Canceled",
-    Refunded = "Refunded",
     Off = "Off",
-    Removed = "Removed",
 }
 
 /** Transpiled from HypeProxy.Constants.TicketPriorities */

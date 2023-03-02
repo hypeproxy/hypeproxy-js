@@ -30,6 +30,12 @@ export type ApiResponse = {
     requestDetails?: RequestDetails;
 }
 
+/** Transpiled from HypeProxy.Responses.BillingSummaryResponse */
+export type BillingSummaryResponse = {
+    /** Transpiled from double */
+    monthlyCosts?: number;
+}
+
 /** Transpiled from HypeProxy.Responses.ClientIpResponse */
 export type ClientIpResponse = {
     /** Transpiled from string */
