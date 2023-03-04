@@ -305,7 +305,9 @@ export type Purchase = {
     /** Transpiled from bool */
     isAutomaticallyRenewable: boolean;
     /** Transpiled from bool */
-    isExtendable: boolean;
+    isRenewable: boolean;
+    /** Transpiled from bool */
+    isRefundable: boolean;
     /** Transpiled from bool */
     isGracePeriod: boolean;
     /** Transpiled from System.DateTime */

@@ -124,8 +124,6 @@ export type UserSummaryResponse = {
     fullName?: string;
     /** Transpiled from string */
     avatar?: string;
-    /** Transpiled from long */
-    monthlyCosts?: number;
     /** Transpiled from HypeProxy.Entities.ApplicationUsers.AuthorizationDetails */
     authorization?: AuthorizationDetails;
 }
