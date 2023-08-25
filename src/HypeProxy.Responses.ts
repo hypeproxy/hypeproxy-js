@@ -2,32 +2,38 @@
 /* eslint-disable */
 /* tslint:disable */
 import { ApiError } from './HypeProxy.Errors';
-import { RequestDetails } from './HypeProxy.Requests';
+import { RequestDetail } from './HypeProxy.Entities.Statuses';
 import { LocationDetails } from './HypeProxy.DataModels';
-import { AuthorizationDetails } from './HypeProxy.Entities.ApplicationUsers';
+import { AuthorizationDetails } from './HypeProxy.Entities.Users';
 
 /** Transpiled from HypeProxy.Responses.ApiKeyResponse */
 export type ApiKeyResponse = {
     /** Transpiled from System.Guid */
     userId: string;
     /** Transpiled from string */
-    token?: string;
+    token: string;
     /** Transpiled from System.DateTime */
     tokenExpiration?: (Date | string);
 }
 
 /** Transpiled from HypeProxy.Responses.ApiResponse */
 export type ApiResponse = {
-    /** Transpiled from string */
-    message?: string;
     /** Transpiled from int */
     statusCode: number;
-    /** Transpiled from object */
-    data?: any;
     /** Transpiled from System.Collections.Generic.IEnumerable<HypeProxy.Errors.ApiError> */
-    errors?: ApiError[];
-    /** Transpiled from HypeProxy.Requests.RequestDetails */
-    requestDetails?: RequestDetails;
+    errors: ApiError[];
+}
+
+/** Transpiled from HypeProxy.Responses.AvailableStockResponse */
+export type AvailableStockResponse = {
+    /** Transpiled from int */
+    availableQuantity: number;
+}
+
+/** Transpiled from HypeProxy.Responses.BillingPortalResponse */
+export type BillingPortalResponse = {
+    /** Transpiled from string */
+    returnUrl: string;
 }
 
 /** Transpiled from HypeProxy.Responses.BillingSummaryResponse */
@@ -38,27 +44,27 @@ export type BillingSummaryResponse = {
 
 /** Transpiled from HypeProxy.Responses.ClientIpResponse */
 export type ClientIpResponse = {
-    /** Transpiled from string */
+    /** Transpiled from string? */
     clientIp?: string;
 }
 
 /** Transpiled from HypeProxy.Responses.InsightsSummaryResponse */
 export type InsightsSummaryResponse = {
     /** Transpiled from string */
-    remoteIp?: string;
+    remoteIp: string;
     /** Transpiled from string */
-    internetServiceProvider?: string;
+    internetServiceProvider: string;
     /** Transpiled from string */
-    asn?: string;
+    asn: string;
     /** Transpiled from int */
     trustScore: number;
     /** Transpiled from HypeProxy.DataModels.LocationDetails */
-    geolocationDetails?: LocationDetails;
+    geolocationDetails: LocationDetails;
 }
 
 /** Transpiled from HypeProxy.Responses.OrderSummaryResponse */
 export type OrderSummaryResponse = {
-    /** Transpiled from string */
+    /** Transpiled from string? */
     details?: string;
     /** Transpiled from double */
     unitPrice: number;
@@ -74,15 +80,13 @@ export type OrderSummaryResponse = {
     priceOff?: number;
     /** Transpiled from double */
     percentOff?: number;
-    /** Transpiled from int */
-    availableStockForCriteria: number;
 }
 
 /** Transpiled from HypeProxy.Responses.PaymentResponse */
 export type PaymentResponse = {
     /** Transpiled from System.Uri */
-    returnUrl?: string;
-    /** Transpiled from object */
+    returnUrl: string;
+    /** Transpiled from object? */
     customData?: any;
 }
 
@@ -98,8 +102,6 @@ export type PingResponse = {
 
 /** Transpiled from HypeProxy.Responses.UserRequirementsResponse */
 export type UserRequirementsResponse = {
-    /** Transpiled from System.Guid */
-    id: string;
     /** Transpiled from bool */
     hadFirstLogin: boolean;
     /** Transpiled from bool */
@@ -121,10 +123,8 @@ export type UserSummaryResponse = {
     /** Transpiled from System.Guid */
     userId: string;
     /** Transpiled from string */
-    fullName?: string;
+    fullName: string;
     /** Transpiled from string */
-    avatar?: string;
-    /** Transpiled from HypeProxy.Entities.ApplicationUsers.AuthorizationDetails */
-    authorization?: AuthorizationDetails;
+    avatar: string;
 }
 

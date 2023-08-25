@@ -5,17 +5,17 @@
 /** Transpiled from HypeProxy.DataModels.LocationDetails */
 export type LocationDetails = {
     /** Transpiled from string */
-    continent?: string;
+    continent: string;
     /** Transpiled from string */
-    country?: string;
+    country: string;
     /** Transpiled from string */
-    countryCode?: string;
+    countryCode: string;
     /** Transpiled from string */
-    countryEmoji?: string;
+    countryEmoji: string;
     /** Transpiled from string */
-    region?: string;
+    region: string;
     /** Transpiled from string */
-    city?: string;
+    city: string;
 }
 
 /** Transpiled from HypeProxy.DataModels.LogLine */
@@ -23,21 +23,21 @@ export type LogLine = {
     /** Transpiled from System.DateTime */
     dateTime: (Date | string);
     /** Transpiled from string */
-    serviceName?: string;
+    serviceName: string;
     /** Transpiled from int */
     errorCode: number;
     /** Transpiled from string */
-    clientEndpoint?: string;
+    clientEndpoint: string;
     /** Transpiled from string */
-    targetEndpoint?: string;
+    targetEndpoint: string;
     /** Transpiled from HypeProxy.DataModels.LocationDetails */
-    clientLocation?: LocationDetails;
+    clientLocation: LocationDetails;
     /** Transpiled from HypeProxy.DataModels.LocationDetails */
-    targetLocation?: LocationDetails;
+    targetLocation: LocationDetails;
     /** Transpiled from string */
-    httpMethod?: string;
+    httpMethod: string;
     /** Transpiled from string */
-    url?: string;
+    url: string;
     /** Transpiled from long */
     receivedBytes: number;
 }
