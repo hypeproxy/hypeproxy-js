@@ -12,7 +12,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: 6.0.x
+          dotnet-version: 7.0.x
 
       - name: Clone hypeproxy-dotnet
         run: git clone https://github.com/hypeproxy/hypeproxy-dotnet
@@ -24,7 +24,7 @@ jobs:
         run: dotnet build ./hypeproxy-dotnet/src/HypeProxy/HypeProxy.csproj --configuration Release
 
       - name: Install Tapper
-        run: dotnet tool install --global Tapper.Generator --version 1.7.1
+        run: dotnet tool install --global Tapper.Generator --version 1.8.3
 
       - name: Prevent HypeProxy.ts files for deletion
         run: mv src/HypeProxy.ts .
