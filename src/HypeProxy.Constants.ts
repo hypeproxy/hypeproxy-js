@@ -591,6 +591,8 @@ export enum PurchaseStatuses {
     Created = "Created",
     Live = "Live",
     Off = "Off",
+    GracePeriod = "GracePeriod",
+    Canceled = "Canceled",
 }
 
 /** Transpiled from HypeProxy.Constants.TicketPriorities */

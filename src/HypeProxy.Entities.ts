@@ -170,6 +170,10 @@ export type Purchase = {
     isTrial: boolean;
     /** Transpiled from System.Guid */
     productId: string;
+    /** Transpiled from bool */
+    isGracePeriod: boolean;
+    /** Transpiled from System.DateTime */
+    gracePeriodEnd?: (Date | string);
 } & BaseEntityWithOwnership;
 
 /** Transpiled from HypeProxy.Entities.Reminder */
