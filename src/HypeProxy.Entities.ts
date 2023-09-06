@@ -174,6 +174,8 @@ export type Purchase = {
     isGracePeriod: boolean;
     /** Transpiled from System.DateTime */
     gracePeriodEnd?: (Date | string);
+    /** Transpiled from bool */
+    isRefundable: boolean;
 } & BaseEntityWithOwnership;
 
 /** Transpiled from HypeProxy.Entities.Reminder */
