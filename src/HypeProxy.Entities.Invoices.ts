@@ -10,9 +10,9 @@ export type Invoice = {
     status: InvoiceStatuses;
     /** Transpiled from HypeProxy.Constants.PaymentMethods */
     paymentMethod: PaymentMethods;
-    /** Transpiled from double */
+    /** Transpiled from decimal */
     subtotalAmount: number;
-    /** Transpiled from double */
+    /** Transpiled from decimal */
     totalAmount: number;
     /** Transpiled from string? */
     thirdPartyInvoiceId?: string;
@@ -34,9 +34,9 @@ export type InvoiceItem = {
     name: string;
     /** Transpiled from int */
     quantity: number;
-    /** Transpiled from double */
+    /** Transpiled from decimal */
     unitPrice: number;
-    /** Transpiled from double */
+    /** Transpiled from decimal */
     totalAmount: number;
     /** Transpiled from System.Guid */
     invoiceId: string;
