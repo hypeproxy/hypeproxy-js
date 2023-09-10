@@ -182,11 +182,15 @@ export type Purchase = {
 
 /** Transpiled from HypeProxy.Entities.Reminder */
 export type Reminder = {
-    /** Transpiled from string */
-    contactEmail: string;
+    /** Transpiled from string? */
+    contactEmail?: string;
     /** Transpiled from bool */
     wasContacted: boolean;
     /** Transpiled from System.Guid */
     productId: string;
+    /** Transpiled from System.Guid */
+    locationId?: string;
+    /** Transpiled from System.Guid */
+    providerId?: string;
 } & BaseEntityWithOwnership;
 
