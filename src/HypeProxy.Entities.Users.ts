@@ -82,6 +82,8 @@ export type User = {
     tickets: Ticket[];
     /** Transpiled from System.Collections.Generic.ICollection<HypeProxy.Entities.Tickets.TicketAnswer> */
     ticketAnswers: TicketAnswer[];
+    /** Transpiled from bool */
+    isBetaEnrolled: boolean;
     /** Transpiled from string? */
     cultureConcern?: string;
     /** Transpiled from int */

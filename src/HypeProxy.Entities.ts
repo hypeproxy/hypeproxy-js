@@ -96,6 +96,8 @@ export type Notification = {
     title?: string;
     /** Transpiled from string? */
     message?: string;
+    /** Transpiled from System.Uri? */
+    link?: string;
     /** Transpiled from HypeProxy.Constants.WarningLevels */
     level: WarningLevels;
     /** Transpiled from HypeProxy.Constants.Icons */
