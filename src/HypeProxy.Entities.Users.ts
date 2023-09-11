@@ -105,8 +105,8 @@ export type UserSettings = {
     /** Transpiled from bool */
     skipPurchaseAssistant: boolean;
     /** Transpiled from HypeProxy.Constants.BillingCycles */
-    defaultBillingCycles: BillingCycles;
+    defaultBillingCycle: BillingCycles;
     /** Transpiled from HypeProxy.Constants.PaymentMethods */
-    defaultPaymentMethods: PaymentMethods;
+    defaultPaymentMethod: PaymentMethods;
 }
 
