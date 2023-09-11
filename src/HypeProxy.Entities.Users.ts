@@ -102,6 +102,8 @@ export type UserSettings = {
     developerMode: boolean;
     /** Transpiled from bool */
     betaEnrolled: boolean;
+    /** Transpiled from bool */
+    skipPurchaseAssistant: boolean;
     /** Transpiled from HypeProxy.Constants.BillingCycles */
     defaultBillingPeriods: BillingCycles;
     /** Transpiled from HypeProxy.Constants.PaymentMethods */
