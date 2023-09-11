@@ -82,8 +82,6 @@ export type User = {
     tickets: Ticket[];
     /** Transpiled from System.Collections.Generic.ICollection<HypeProxy.Entities.Tickets.TicketAnswer> */
     ticketAnswers: TicketAnswer[];
-    /** Transpiled from bool */
-    isBetaEnrolled: boolean;
     /** Transpiled from string? */
     cultureConcern?: string;
     /** Transpiled from int */
@@ -100,6 +98,10 @@ export type User = {
 
 /** Transpiled from HypeProxy.Entities.Users.UserSettings */
 export type UserSettings = {
+    /** Transpiled from bool */
+    developerMode: boolean;
+    /** Transpiled from bool */
+    betaEnrolled: boolean;
     /** Transpiled from HypeProxy.Constants.BillingCycles */
     defaultBillingPeriods: BillingCycles;
     /** Transpiled from HypeProxy.Constants.PaymentMethods */
