@@ -61,12 +61,18 @@ export type ChangeRequirementsRequest = {
     usageExplanation: string;
 }
 
-/** Transpiled from HypeProxy.Requests.ChangeUserSettingsRequest */
-export type ChangeUserSettingsRequest = {
+/** Transpiled from HypeProxy.Requests.ChangeSettingsRequest */
+export type ChangeSettingsRequest = {
+    /** Transpiled from bool */
+    developerMode?: boolean;
+    /** Transpiled from bool */
+    betaEnrolled?: boolean;
+    /** Transpiled from bool */
+    skipPurchaseAssistant?: boolean;
     /** Transpiled from HypeProxy.Constants.BillingCycles */
-    defaultBillingCycle: BillingCycles;
+    defaultBillingCycle?: BillingCycles;
     /** Transpiled from HypeProxy.Constants.PaymentMethods */
-    defaultPaymentMethod: PaymentMethods;
+    defaultPaymentMethod?: PaymentMethods;
 }
 
 /** Transpiled from HypeProxy.Requests.ConfirmEmailRequest */
