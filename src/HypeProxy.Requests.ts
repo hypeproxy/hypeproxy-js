@@ -85,10 +85,14 @@ export type ConfirmEmailRequest = {
 
 /** Transpiled from HypeProxy.Requests.CreateReminderRequest */
 export type CreateReminderRequest = {
-    /** Transpiled from string */
-    email: string;
+    /** Transpiled from string? */
+    email?: string;
     /** Transpiled from System.Guid */
     productId: string;
+    /** Transpiled from System.Guid */
+    locationId: string;
+    /** Transpiled from System.Guid */
+    providerId: string;
 }
 
 /** Transpiled from HypeProxy.Requests.CreateTicketAnswerRequest */
