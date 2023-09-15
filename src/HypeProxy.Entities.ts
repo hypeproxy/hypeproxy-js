@@ -64,6 +64,8 @@ export type Feature = {
     switchComponentName?: string;
     /** Transpiled from string? */
     bladeComponentName?: string;
+    /** Transpiled from string? */
+    tag?: string;
 } & BaseEntity;
 
 /** Transpiled from HypeProxy.Entities.Location */
