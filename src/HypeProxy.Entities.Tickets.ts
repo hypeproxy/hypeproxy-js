@@ -2,7 +2,7 @@
 /* eslint-disable */
 /* tslint:disable */
 import { TicketPriorities } from './HypeProxy.Constants';
-import { Purchase, BaseEntityWithOwnership } from './HypeProxy.Entities';
+import { Purchase, BaseEntityWithOwnership, BaseEntityWithCustomFilter } from './HypeProxy.Entities';
 import { User } from './HypeProxy.Entities.Users';
 
 /** Transpiled from HypeProxy.Entities.Tickets.Ticket */
@@ -29,5 +29,5 @@ export type TicketAnswer = {
     answeredAt?: (Date | string);
     /** Transpiled from System.Guid */
     userId: string;
-}
+} & BaseEntityWithCustomFilter;
 

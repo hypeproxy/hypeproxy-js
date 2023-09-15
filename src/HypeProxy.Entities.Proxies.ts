@@ -2,7 +2,7 @@
 /* eslint-disable */
 /* tslint:disable */
 import { ComputeUnit } from './HypeProxy.Entities.Infrastructure';
-import { Provider, BaseEntityWithPurchaseContext } from './HypeProxy.Entities';
+import { Provider, BaseEntityWithCustomFilter, BaseEntityWithPurchaseContext } from './HypeProxy.Entities';
 import { IpRotation } from './HypeProxy.Entities.Features';
 
 /** Transpiled from HypeProxy.Entities.Proxies.AuthorizedIp */
@@ -19,7 +19,7 @@ export type Credential = {
     password?: string;
     /** Transpiled from System.Collections.Generic.ICollection<HypeProxy.Entities.Proxies.AuthorizedIp>? */
     authorizedIps?: AuthorizedIp[];
-}
+} & BaseEntityWithCustomFilter;
 
 /** Transpiled from HypeProxy.Entities.Proxies.Proxy */
 export type Proxy = {

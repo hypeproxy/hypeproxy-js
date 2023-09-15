@@ -20,6 +20,10 @@ export type BaseEntity = {
     weight?: number;
 }
 
+/** Transpiled from HypeProxy.Entities.BaseEntityWithCustomFilter */
+export type BaseEntityWithCustomFilter = {
+} & BaseEntity;
+
 /** Transpiled from HypeProxy.Entities.BaseEntityWithOwnership */
 export type BaseEntityWithOwnership = {
     /** Transpiled from System.DateTime */
