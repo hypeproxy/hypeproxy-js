@@ -29,6 +29,8 @@ export type Proxy = {
     remoteHostname?: string;
     /** Transpiled from int */
     port: number;
+    /** Transpiled from int */
+    port2?: number;
     /** Transpiled from System.Guid */
     computeUnitId?: string;
     /** Transpiled from System.Guid */

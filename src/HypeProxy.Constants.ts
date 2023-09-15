@@ -268,12 +268,6 @@ export enum DefaultApiErrorCodes {
     FailedValidation = "FailedValidation",
 }
 
-/** Transpiled from HypeProxy.Constants.FeatureTypes */
-export enum FeatureTypes {
-    IpRotation = "IpRotation",
-    IpAuthentication = "IpAuthentication",
-}
-
 /** Transpiled from HypeProxy.Constants.Icons */
 export enum Icons {
     AcademicCapIcon = "AcademicCapIcon",

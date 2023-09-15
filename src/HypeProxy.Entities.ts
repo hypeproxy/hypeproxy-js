@@ -58,12 +58,12 @@ export type Feature = {
     description?: string;
     /** Transpiled from string? */
     icon?: string;
+    /** Transpiled from bool */
+    visibleSwitch: boolean;
     /** Transpiled from string? */
-    frontComponentName?: string;
+    switchComponentName?: string;
     /** Transpiled from string? */
     bladeComponentName?: string;
-    /** Transpiled from string? */
-    extraComponentName?: string;
 } & BaseEntity;
 
 /** Transpiled from HypeProxy.Entities.Location */
