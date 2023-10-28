@@ -2,8 +2,8 @@
 /* eslint-disable */
 /* tslint:disable */
 
-/** Transpiled from HypeProxy.DataModels.LocationDetails */
-export type LocationDetails = {
+/** Transpiled from HypeProxy.DataModels.GeolocationDetails */
+export type GeolocationDetails = {
     /** Transpiled from string */
     continent: string;
     /** Transpiled from string */
@@ -16,29 +16,5 @@ export type LocationDetails = {
     region: string;
     /** Transpiled from string */
     city: string;
-}
-
-/** Transpiled from HypeProxy.DataModels.LogLine */
-export type LogLine = {
-    /** Transpiled from System.DateTime */
-    dateTime: (Date | string);
-    /** Transpiled from string */
-    serviceName: string;
-    /** Transpiled from int */
-    errorCode: number;
-    /** Transpiled from string */
-    clientEndpoint: string;
-    /** Transpiled from string */
-    targetEndpoint: string;
-    /** Transpiled from HypeProxy.DataModels.LocationDetails */
-    clientLocation: LocationDetails;
-    /** Transpiled from HypeProxy.DataModels.LocationDetails */
-    targetLocation: LocationDetails;
-    /** Transpiled from string */
-    httpMethod: string;
-    /** Transpiled from string */
-    url: string;
-    /** Transpiled from long */
-    receivedBytes: number;
 }
 

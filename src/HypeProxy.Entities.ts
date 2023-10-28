@@ -2,7 +2,7 @@
 /* eslint-disable */
 /* tslint:disable */
 import { User } from './HypeProxy.Entities.Users';
-import { CountryCodes, WarningLevels, Icons, PurchaseStatuses, PaymentMethods, BillingCycles } from './HypeProxy.Constants';
+import { FeatureTags, CountryCodes, WarningLevels, Icons, PurchaseStatuses, PaymentMethods, BillingCycles } from './HypeProxy.Constants';
 import { Datacenter } from './HypeProxy.Entities.Infrastructure';
 import { Price } from './HypeProxy.Entities.Prices';
 import { Proxy } from './HypeProxy.Entities.Proxies';
@@ -30,8 +30,6 @@ export type BaseEntityWithOwnership = {
     createdAt?: (Date | string);
     /** Transpiled from System.DateTime */
     updatedAt?: (Date | string);
-    /** Transpiled from System.Guid */
-    userId: string;
 } & BaseEntity;
 
 /** Transpiled from HypeProxy.Entities.BaseEntityWithPurchaseContext */
@@ -43,7 +41,7 @@ export type BaseEntityWithPurchaseContext = {
 /** Transpiled from HypeProxy.Entities.Coupon */
 export type Coupon = {
     /** Transpiled from string */
-    code: string;
+    couponCode: string;
     /** Transpiled from string? */
     description?: string;
     /** Transpiled from double */
@@ -52,6 +50,8 @@ export type Coupon = {
     isOneTime: boolean;
     /** Transpiled from bool */
     isUsed: boolean;
+    /** Transpiled from System.DateTime */
+    expireAt?: (Date | string);
 } & BaseEntityWithOwnership;
 
 /** Transpiled from HypeProxy.Entities.Feature */
@@ -68,8 +68,8 @@ export type Feature = {
     switchComponentName?: string;
     /** Transpiled from string? */
     bladeComponentName?: string;
-    /** Transpiled from string? */
-    tag?: string;
+    /** Transpiled from HypeProxy.Constants.FeatureTags */
+    tag: FeatureTags;
 } & BaseEntity;
 
 /** Transpiled from HypeProxy.Entities.Location */
@@ -137,6 +137,10 @@ export type Product = {
     /** Transpiled from System.Uri? */
     postHookUrl?: string;
     /** Transpiled from int */
+    bulkDiscountThreshold?: number;
+    /** Transpiled from int */
+    minimumOrder?: number;
+    /** Transpiled from int */
     availableStock: number;
     /** Transpiled from bool */
     outOfStock: boolean;
@@ -178,6 +182,10 @@ export type Purchase = {
     isTrial: boolean;
     /** Transpiled from System.Guid */
     productId: string;
+    /** Transpiled from System.Guid */
+    priceId: string;
+    /** Transpiled from HypeProxy.Entities.Prices.Price */
+    price: Price;
     /** Transpiled from bool */
     isGracePeriod: boolean;
     /** Transpiled from System.DateTime */

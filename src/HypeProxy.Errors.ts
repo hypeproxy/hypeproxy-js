@@ -4,13 +4,9 @@
 
 /** Transpiled from HypeProxy.Errors.ApiError */
 export type ApiError = {
-    /** Transpiled from HypeProxy.Errors.ApiErrorCode */
-    code: ApiErrorCode;
     /** Transpiled from string */
-    description: string;
-}
-
-/** Transpiled from HypeProxy.Errors.ApiErrorCode */
-export type ApiErrorCode = {
+    code: string;
+    /** Transpiled from string? */
+    description?: string;
 }
 

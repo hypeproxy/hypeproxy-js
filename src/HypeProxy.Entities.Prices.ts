@@ -2,7 +2,7 @@
 /* eslint-disable */
 /* tslint:disable */
 import { PaymentMethods, BillingCycles } from './HypeProxy.Constants';
-import { Product, Location, Provider, BaseEntity } from './HypeProxy.Entities';
+import { Product, Location, Provider, Purchase, BaseEntity } from './HypeProxy.Entities';
 
 /** Transpiled from HypeProxy.Entities.Prices.Price */
 export type Price = {
@@ -10,12 +10,12 @@ export type Price = {
     paymentMethod: PaymentMethods;
     /** Transpiled from HypeProxy.Constants.BillingCycles */
     billingCycle: BillingCycles;
-    /** Transpiled from bool */
-    isAutomaticRenewEnabled: boolean;
     /** Transpiled from double */
     unitPrice: number;
     /** Transpiled from string? */
-    planId?: string;
+    oneTimePaymentPlanId?: string;
+    /** Transpiled from string? */
+    recurringPaymentPlanId?: string;
     /** Transpiled from System.Guid */
     productId: string;
     /** Transpiled from System.Guid */
@@ -30,6 +30,8 @@ export type Price = {
     provider?: Provider;
     /** Transpiled from System.Collections.Generic.ICollection<HypeProxy.Entities.Prices.PriceTier>? */
     priceTiers?: PriceTier[];
+    /** Transpiled from System.Collections.Generic.ICollection<HypeProxy.Entities.Purchase>? */
+    purchases?: Purchase[];
 } & BaseEntity;
 
 /** Transpiled from HypeProxy.Entities.Prices.PriceTier */

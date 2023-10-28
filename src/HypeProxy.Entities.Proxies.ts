@@ -5,20 +5,14 @@ import { ComputeUnit } from './HypeProxy.Entities.Infrastructure';
 import { Provider, BaseEntityWithCustomFilter, BaseEntityWithPurchaseContext } from './HypeProxy.Entities';
 import { IpRotation } from './HypeProxy.Entities.Features';
 
-/** Transpiled from HypeProxy.Entities.Proxies.AuthorizedIp */
-export type AuthorizedIp = {
-    /** Transpiled from string */
-    ipAddress: string;
-}
-
 /** Transpiled from HypeProxy.Entities.Proxies.Credential */
 export type Credential = {
     /** Transpiled from string? */
     username?: string;
     /** Transpiled from string? */
     password?: string;
-    /** Transpiled from System.Collections.Generic.ICollection<HypeProxy.Entities.Proxies.AuthorizedIp>? */
-    authorizedIps?: AuthorizedIp[];
+    /** Transpiled from System.Collections.Generic.IEnumerable<string>? */
+    authorizedIps?: string[];
 } & BaseEntityWithCustomFilter;
 
 /** Transpiled from HypeProxy.Entities.Proxies.Proxy */

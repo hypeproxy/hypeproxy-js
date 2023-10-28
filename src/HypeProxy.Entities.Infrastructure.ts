@@ -32,6 +32,8 @@ export type ComputeUnit = {
 export type Datacenter = {
     /** Transpiled from string */
     name: string;
+    /** Transpiled from string? */
+    description?: string;
     /** Transpiled from int */
     capacity?: number;
     /** Transpiled from bool */

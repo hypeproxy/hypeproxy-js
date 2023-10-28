@@ -63,9 +63,9 @@ export type User = {
     /** Transpiled from string */
     fullName: string;
     /** Transpiled from System.DateTime */
-    registrationDateTime: (Date | string);
-    /** Transpiled from string */
-    stripeCustomerId: string;
+    registeredAt: (Date | string);
+    /** Transpiled from string? */
+    stripeCustomerId?: string;
     /** Transpiled from System.Guid */
     billingDetailsId?: string;
     /** Transpiled from System.Collections.Generic.ICollection<HypeProxy.Entities.Purchase> */
