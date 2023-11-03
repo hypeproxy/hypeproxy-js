@@ -2,10 +2,6 @@
 /* eslint-disable */
 /* tslint:disable */
 
-/** Transpiled from HypeProxy.Constants.ApiErrorCodes */
-export type ApiErrorCodes = {
-}
-
 /** Transpiled from HypeProxy.Constants.ApiErrorCodes.Authentication */
 export type Authentication = {
 }
