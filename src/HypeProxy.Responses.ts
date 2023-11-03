@@ -4,7 +4,7 @@
 import { ApiError } from './HypeProxy.Errors';
 import { RequestDetail } from './HypeProxy.Entities.Statuses';
 import { GeolocationDetails } from './HypeProxy.DataModels';
-import { AuthorizationDetails } from './HypeProxy.Entities.Users';
+import { AuthorizationDetails, BillingDetails } from './HypeProxy.Entities.Users';
 
 /** Transpiled from HypeProxy.Responses.ApiResponse */
 export type ApiResponse = {
@@ -130,13 +130,19 @@ export type UserRequirementsResponse = {
 export type UserSummaryResponse = {
     /** Transpiled from System.Guid */
     userId: string;
+    /** Transpiled from string? */
+    userHash?: string;
     /** Transpiled from string */
     fullName: string;
     /** Transpiled from string? */
     email?: string;
     /** Transpiled from string */
     avatar: string;
+    /** Transpiled from System.DateTime */
+    registeredAt: (Date | string);
     /** Transpiled from HypeProxy.Entities.Users.AuthorizationDetails? */
     authorization?: AuthorizationDetails;
+    /** Transpiled from HypeProxy.Entities.Users.BillingDetails? */
+    billingDetails?: BillingDetails;
 }
 
