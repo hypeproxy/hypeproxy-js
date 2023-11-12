@@ -2,7 +2,8 @@
 /* eslint-disable */
 /* tslint:disable */
 import { InvoiceStatuses, PaymentMethods } from './HypeProxy.Constants';
-import { Purchase, BaseEntityWithOwnership } from './HypeProxy.Entities';
+import { Purchase } from './HypeProxy.Entities';
+import { BaseEntityWithOwnership } from './HypeProxy.Infrastructure.Entities';
 
 /** Transpiled from HypeProxy.Entities.Invoices.Invoice */
 export type Invoice = {

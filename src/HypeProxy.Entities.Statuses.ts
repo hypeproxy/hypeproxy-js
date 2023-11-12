@@ -2,7 +2,7 @@
 /* eslint-disable */
 /* tslint:disable */
 import { Icons, WarningLevels } from './HypeProxy.Constants';
-import { BaseEntityWithOwnership } from './HypeProxy.Entities';
+import { BaseEntityWithOwnership } from './HypeProxy.Infrastructure.Entities';
 
 /** Transpiled from HypeProxy.Entities.Statuses.RequestDetail */
 export type RequestDetail = {

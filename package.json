@@ -1,6 +1,6 @@
 {
   "name": "hypeproxy",
-  "version": "3.0.64",
+  "version": "3.0.65",
   "description": "HypeProxy.io Javascript Library",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

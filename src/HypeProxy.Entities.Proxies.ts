@@ -2,8 +2,9 @@
 /* eslint-disable */
 /* tslint:disable */
 import { ComputeUnit } from './HypeProxy.Entities.Infrastructure';
-import { Provider, BaseEntityWithCustomFilter, BaseEntityWithPurchaseContext } from './HypeProxy.Entities';
+import { Provider } from './HypeProxy.Entities';
 import { IpRotation } from './HypeProxy.Entities.Features';
+import { BaseEntityWithCustomFilter, BaseEntityWithPurchaseContext } from './HypeProxy.Infrastructure.Entities';
 
 /** Transpiled from HypeProxy.Entities.Proxies.Credential */
 export type Credential = {

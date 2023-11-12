@@ -2,8 +2,9 @@
 /* eslint-disable */
 /* tslint:disable */
 import { TicketPriorities } from './HypeProxy.Constants';
-import { Purchase, BaseEntityWithOwnership, BaseEntityWithCustomFilter } from './HypeProxy.Entities';
+import { Purchase } from './HypeProxy.Entities';
 import { User } from './HypeProxy.Entities.Users';
+import { BaseEntityWithOwnership, BaseEntityWithCustomFilter } from './HypeProxy.Infrastructure.Entities';
 
 /** Transpiled from HypeProxy.Entities.Tickets.Ticket */
 export type Ticket = {

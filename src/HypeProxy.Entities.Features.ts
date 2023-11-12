@@ -2,7 +2,7 @@
 /* eslint-disable */
 /* tslint:disable */
 import { Proxy } from './HypeProxy.Entities.Proxies';
-import { BaseEntityWithCustomFilter } from './HypeProxy.Entities';
+import { BaseEntityWithCustomFilter } from './HypeProxy.Infrastructure.Entities';
 
 /** Transpiled from HypeProxy.Entities.Features.IpRotation */
 export type IpRotation = {

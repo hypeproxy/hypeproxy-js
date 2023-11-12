@@ -3,7 +3,7 @@
 /* tslint:disable */
 import { Product, Feature, Location, Provider } from './HypeProxy.Entities';
 
-/** Transpiled from HypeProxy.Entities.Joins.ProductFeature */
+/** Transpiled from HypeProxy.Infrastructure.Joins.ProductFeature */
 export type ProductFeature = {
     /** Transpiled from System.Guid */
     id: string;
@@ -17,7 +17,7 @@ export type ProductFeature = {
     feature: Feature;
 }
 
-/** Transpiled from HypeProxy.Entities.Joins.ProductLocation */
+/** Transpiled from HypeProxy.Infrastructure.Joins.ProductLocation */
 export type ProductLocation = {
     /** Transpiled from System.Guid */
     id: string;
@@ -31,7 +31,7 @@ export type ProductLocation = {
     location: Location;
 }
 
-/** Transpiled from HypeProxy.Entities.Joins.ProductProvider */
+/** Transpiled from HypeProxy.Infrastructure.Joins.ProductProvider */
 export type ProductProvider = {
     /** Transpiled from System.Guid */
     id: string;

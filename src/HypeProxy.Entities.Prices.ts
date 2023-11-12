@@ -2,7 +2,8 @@
 /* eslint-disable */
 /* tslint:disable */
 import { PaymentMethods, BillingCycles } from './HypeProxy.Constants';
-import { Product, Location, Provider, Purchase, BaseEntity } from './HypeProxy.Entities';
+import { Product, Location, Provider, Purchase } from './HypeProxy.Entities';
+import { BaseEntity } from './HypeProxy.Infrastructure.Entities';
 
 /** Transpiled from HypeProxy.Entities.Prices.Price */
 export type Price = {
