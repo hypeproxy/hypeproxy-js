@@ -4,17 +4,17 @@
 
 /** Transpiled from HypeProxy.DataModels.GeolocationDetails */
 export type GeolocationDetails = {
-    /** Transpiled from string */
-    continent: string;
-    /** Transpiled from string */
-    country: string;
-    /** Transpiled from string */
-    countryCode: string;
-    /** Transpiled from string */
-    countryEmoji: string;
-    /** Transpiled from string */
-    region: string;
-    /** Transpiled from string */
-    city: string;
+    /** Transpiled from string? */
+    continent?: string;
+    /** Transpiled from string? */
+    country?: string;
+    /** Transpiled from string? */
+    countryCode?: string;
+    /** Transpiled from string? */
+    countryEmoji?: string;
+    /** Transpiled from string? */
+    region?: string;
+    /** Transpiled from string? */
+    city?: string;
 }
 
