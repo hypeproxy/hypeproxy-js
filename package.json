@@ -11,7 +11,7 @@
 		"Clint Mourlevat <me@clint21.dev> (https://github.com/imclint21)"
 	],
 	"scripts": {
-		"build": "./node_modules/.bin/tsc index.ts -t es3 -m commonjs -d --outDir dist"
+		"build": "./node_modules/.bin/tsc ./build/index.ts -t es3 -m commonjs -d --outDir dist"
 	},
 	"repository": {
 		"type": "git",
