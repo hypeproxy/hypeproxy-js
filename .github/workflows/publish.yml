@@ -24,21 +24,18 @@ jobs:
         run: dotnet build ./hypeproxy-dotnet/src/HypeProxy/HypeProxy.csproj --configuration Release
 
       - name: Install Tapper
-        run: dotnet tool install --global Tapper.Generator --version 1.8.3
-
-      - name: Prevent HypeProxy.ts files for deletion
-        run: mv src/HypeProxy.ts .
+        run: dotnet tool install --global Tapper.Generator --version 1.8.4
 
       - name: Transpile
-        run: tapper --project ./hypeproxy-dotnet/src/HypeProxy/HypeProxy.csproj --output ./src/ --enum name
+        run: tapper --project ./hypeproxy-dotnet/src/HypeProxy/HypeProxy.csproj --output ./build --enum name
 
-      - name: Restore HypeProxy.ts files
-        run: mv HypeProxy.ts ./src/
+      - name: Add source files to transpiled files
+        run: cp -R ./src/* ./build
 
       - name: Generate index.ts
         run: |
-          echo "" > ./src/index.ts
-          find ./src -name "*.ts" ! -name "index.ts" | xargs basename -s .ts | sort | xargs -I '{}' bash -c 'echo "export * from \"./{}\";"' >> ./src/index.ts
+          rm -rf ./build/index.ts
+          find ./build -name "*.ts" ! -name "index.ts" | xargs basename -s .ts | sort | xargs -I '{}' bash -c 'echo "export * from \"./{}\";"' >> ./build/index.ts
 
       - name: Bump Version
         run: |
@@ -53,8 +50,8 @@ jobs:
         with:
           node-version: "16.x"
           registry-url: "https://registry.npmjs.org"
-      - run: yarn
-      - run: yarn build
+      - run: npm
+      - run: npm build
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
