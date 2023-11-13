@@ -11,7 +11,7 @@
   <p align="center">
     <a href="hhttps://github.com/hypeproxy/hypeproxy-dotnet/actions"><img src="https://github.com/hypeproxy/hypeproxy-js/actions/workflows/publish.yml/badge.svg" /></a>
     <a href="https://www.typescriptlang.org/"><img src="https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF" /></a>
-    <a href="https://www.npmjs.com/hypeproxy/"><img alt="Nuget" src="https://img.shields.io/npm/v/hypeproxy"></a>
+    <a href="https://www.npmjs.com/hypeproxy/"><img alt="NPM" src="https://img.shields.io/npm/v/hypeproxy"></a>
     <a href="https://github.com/lucid-kv/lucid/blob/master/LICENSE.md"><img src="https://img.shields.io/badge/license-MIT-lightgrey.svg" /></a>
   </p>
 </p>
