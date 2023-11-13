@@ -42,7 +42,7 @@ jobs:
           chmod +x "${GITHUB_WORKSPACE}/.github/bump.sh"
           "${GITHUB_WORKSPACE}/.github/bump.sh"
 
-      - name: Remove hypeproxy-dotnet
+      - name: Cleanup
         run: rm -rf ./hypeproxy-dotnet
           
       # Setup .npmrc file to publish to npm
@@ -51,7 +51,8 @@ jobs:
           node-version: "16.x"
           registry-url: "https://registry.npmjs.org"
       - run: npm
-      - run: npm build
+      - run: npm run build
+      - run: rm -rf ./build
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
