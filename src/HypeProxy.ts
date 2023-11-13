@@ -1,7 +1,9 @@
 // @ts-ignore
-import { ApiResponse } from "./HypeProxy.Responses";
+import { ApiResponse as BaseApiResponse } from "./HypeProxy.Responses";
 
-export interface ApiResponseFor<T> extends ApiResponse
-{
-	data: T;
+export namespace ApplicationResponses {
+	export interface ApiResponse<T> extends BaseApiResponse
+	{
+		data: T;
+	}
 }
